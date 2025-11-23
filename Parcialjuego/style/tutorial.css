@@ -1,0 +1,93 @@
+body {margin: 0; padding: 0;   background-image: url("../img/fondorosa.jpg");background-size: cover;background-position: center;background-repeat: no-repeat;}
+.container{width: 1280px; height: auto; margin: 0 auto; display: flex; justify-content: center;align-items: center;gap: 20px;}
+.brand{width: 15%; height: 50px; float: left;}
+.menuPrincipal{list-style-type: none; display: flex; gap: 30px;}
+.navbar {display: flex; justify-content: space-between; align-items: center; float: right;}
+.brand h2{margin: 0; padding: 0; margin-top: 11px;}
+
+
+header {background: rgb(208, 248, 255);height: 70px;display: flex;align-items: center;}
+
+.btnhome{list-style-type: none; display: flex; gap: 35px; margin-right: 650px; position: relative; z-index: 10;}
+.btnhome a:link{background-color: #ffa64d;color: white;padding: 10px 15px;border-radius: 30px;font-family: "Jersey 20", sans-serif;text-decoration: none;font-size: 20px;display: inline-flex;align-items: center;gap: 8px;box-shadow: 0 4px 10px rgba(255, 150, 50, 0.4);transition: all 0.3s ease;}
+.btnhome a:visited{background-color: #ffa64d;color: white;padding: 10px 15px;border-radius: 30px;font-family: "Jersey 20", sans-serif;text-decoration: none;font-size: 20px;display: inline-flex;align-items: center;gap: 8px;box-shadow: 0 4px 10px rgba(255, 150, 50, 0.4);transition: all 0.3s ease;}
+.btnhome a:hover {background-color: #ffb866;box-shadow: 0 0 20px rgba(255, 170, 60, 0.8);transform: scale(1.05);}
+.btnhome a:active{transform: scale(0.95);box-shadow: inset 0 2px 5px rgba(140, 70, 0, 0.5);}
+
+.border a:link {background-color: #ff70b8;color: white; padding: 10px 15px; border-radius: 30px;font-family: "Jersey 20", sans-serif;text-decoration: none;font-size: 20px;display: inline-flex;align-items: center;gap: 8px;box-shadow: 0 4px 10px rgba(255, 100, 180, 0.4);transition: all 0.3s ease;}
+.border a:visited {background-color: #ff70b8;color: white; padding: 10px 15px; border-radius: 30px;font-family: "Jersey 20", sans-serif;text-decoration: none;font-size: 20px;display: inline-flex;align-items: center;gap: 8px;box-shadow: 0 4px 10px rgba(255, 100, 180, 0.4);transition: all 0.3s ease;}
+.border a:hover {background: linear-gradient(to bottom, #ff7ee8, #ff00c8);box-shadow:0 0 20px #ff7bd8,inset 0 0 10px #ffffffcc;transform: scale(1.05);}
+.border a:active {transform: scale(0.95);box-shadow: inset 0 2px 5px #55004a;}
+
+.sec1{height: 90px;}
+
+p {font-family: "Comic Relief", system-ui; font-size: 20px; margin: 15px;}
+.izq, .der {width: 50%; height: 530px; float: left; padding: 30px 0 0 0;}
+h1 {margin: 0px; padding: 15px;}
+h1 {font-family: "Jersey 10", sans-serif; color: rgb(18, 129, 213); font-size: 90PX;}
+
+footer {background: rgb(255, 255, 190);width: 100%;height: 400px;text-align: center;float: left;position: relative;font-family: "Poppins", sans-serif; list-style-type: none;}
+.footercontent {width: 90%;height: 80%;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;}
+.footerizq {display: flex;flex-direction: column;align-items: flex-start;gap: 20px;}
+.footerder {display: flex;flex-direction: column;align-items: flex-end;gap: 15px;}
+.footerlogo {width: 100px;height: auto;}
+.socialIcons {width: 50px;height: 50px;cursor: pointer;transition: transform 0.2s ease; list-style-type: none; display: flex;}
+.footermarca {position: absolute;bottom: 20px;left: 50%;transform: translateX(-50%);color: #000000;font-size: 16px;border-top: 2px solid #000000;padding-top: 10px;width: 80%;}
+
+.footerbtn a:link {background: none;border: none;color: #ff8800; font-size: 55px;font-weight: bold;cursor: pointer;transition: color 0.3s ease; text-decoration: none;}
+.footerbtn a:visited {background: none;border: none;color: #ff8800; font-size: 55px;font-weight: bold;cursor: pointer;transition: color 0.3s ease;}
+.footerbtn a:hover {color: #ffffff;}
+
+.btnjugar{width: 90%; height: 400px; display: flex; justify-content: center; align-items: center; position: relative;}
+.btnjugar a:link{display: inline-block;font-family: "Jersey 10", sans-serif;font-size: 60px;color: white;text-decoration: none;text-align: center;padding: 40px 100px;background: linear-gradient(to bottom, #ff5ac7, #d600a8);border: 3px solid #ff99e6;box-shadow:0 0 10px #ff7bd8,inset 0 0 5px #ffffff66,inset 0 -4px 10px #a6007b;border-radius: 4px;text-shadow: 0 0 4px #ffffffcc;transition: all 0.2s ease; position: relative; z-index: 3;}
+.btnjugar a:visited{display: inline-block;font-family: "Jersey 10", sans-serif;font-size: 60px;color: white;text-decoration: none;text-align: center;padding: 40px 100px;background: linear-gradient(to bottom, #ff5ac7, #d600a8);border: 3px solid #ff99e6;box-shadow:0 0 10px #ff7bd8,inset 0 0 5px #ffffff66,inset 0 -4px 10px #a6007b;border-radius: 4px;text-shadow: 0 0 4px #ffffffcc;transition: all 0.2s ease;  position: relative; z-index: 3;}
+.btnjugar a:hover{background: linear-gradient(to bottom, #ff7ee8, #ff00c8);box-shadow:0 0 20px #ff7bd8,inset 0 0 10px #ffffffcc;transform: scale(1.05);}
+.btnjugar a:active {transform: scale(0.95);box-shadow: inset 0 2px 5px #55004a;}
+
+@keyframes float1 {
+    0%   { transform: translate(0, 0) rotate(10deg); }
+    25%  { transform: translate(10px, -10px) rotate(15deg); }
+    50%  { transform: translate(-10px, -15px) rotate(12deg); }
+    75%  { transform: translate(5px, -5px) rotate(14deg); }
+    100% { transform: translate(0, 0) rotate(10deg); }
+}
+
+@keyframes float2 {
+    0%   { transform: translate(0, 0) rotate(20deg); }
+    25%  { transform: translate(-20px, -20px) rotate(25deg); }
+    50%  { transform: translate(15px, -10px) rotate(22deg); }
+    75%  { transform: translate(-5px, -15px) rotate(23deg); }
+    100% { transform: translate(0, 0) rotate(20deg); }
+}
+
+@keyframes float3 {
+    0%   { transform: translate(0, 0) rotate(10deg); }
+    25%  { transform: translate(5px, -5px) rotate(8deg); }
+    50%  { transform: translate(-5px, -10px) rotate(12deg); }
+    75%  { transform: translate(8px, -8px) rotate(10deg); }
+    100% { transform: translate(0, 0) rotate(10deg); }
+}
+
+@keyframes float4 {
+    0%   { transform: translate(0, 0) rotate(30deg); }
+    25%  { transform: translate(10px, -15px) rotate(35deg); }
+    50%  { transform: translate(-10px, -20px) rotate(32deg); }
+    75%  { transform: translate(5px, -10px) rotate(34deg); }
+    100% { transform: translate(0, 0) rotate(30deg); }
+}
+
+@keyframes float5 {
+    0%   { transform: translate(0, 0) rotate(-50deg); }
+    25%  { transform: translate(-10px, -5px) rotate(-45deg); }
+    50%  { transform: translate(5px, -10px) rotate(-48deg); }
+    75%  { transform: translate(-5px, -7px) rotate(-46deg); }
+    100% { transform: translate(0, 0) rotate(-50deg); }
+}
+
+
+.btnjugar img, .btnjugar a{position: absolute;}
+.dec1 {position: absolute;top: 10px;left: 250px;width: 400px;z-index: 2;filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));--rotate-start: 10deg;--rotate-mid: 15deg;animation: float1 6s ease-in-out infinite;}
+.dec2 {position: absolute;top: -300px;left: -200px;width: 700px;z-index: 1;filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));--rotate-start: 20deg;--rotate-mid: 25deg;animation: float2 8s ease-in-out infinite;}
+.dec3 {position: absolute; top: -60px; left: 300px;width: 300px;z-index: 4; transform: rotate(10deg); pointer-events: none; filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2)); animation: float3 5s ease-in-out infinite;}
+.dec4 {position: absolute;top: 100px;left: -20px;width: 200px;z-index: 5;pointer-events: none;filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));--rotate-start: 30deg;--rotate-mid: 35deg;animation: float4 7s ease-in-out infinite;}
+.dec5 {position: absolute;top: 250px;left: 200px;width: 100px;z-index: 6;pointer-events: none;filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));--rotate-start: -50deg;--rotate-mid: -45deg;animation: float5 6.5s ease-in-out infinite;}

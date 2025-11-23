@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style/juego.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Jersey+10&family=Jersey+20&family=Oi&display=swap" rel="stylesheet">
+</head>
+<script>
+  if (window.location.hash === "#final") {
+    window.scrollTo(0, 0);
+    history.replaceState(null, null, " ");
+  }
+</script>
+<body>
+    <header>
+        <div class="container">
+            <li class="btnhome"><a href="index.html">INICIO</a></li>
+            <nav class="navbar">
+                <ul class="menuPrincipal">
+                    <li class="border"><a href="tutorial.html">TUTORIAL</a></li>
+                    <li class="border"><a href="historia.html">HISTORIA</a></li>
+                    <li class="border"><a href="galeria.html">GALERIA</a></li>
+                    <li class="border"><a href="#final">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="sec1"></div>
+        <section class="juego">
+  <div class="game-container">
+    <div class="background"></div>
+    <div class="princess"></div>
+    <div class="obstacle"></div>
+    <div class="game-over">
+      <h2>¡Has escapado del castillo! 👑</h2>
+      <div class="buttons">
+        <button id="retryBtn">Reintentar</button>
+        <button id="homeBtn">Inicio</button>
+      </div>
+    </div>
+  </div>
+</section>
+        </div>
+    </section>
+
+
+
+    <footer>
+    <a name="final"></a>
+  <div class="footercontent">
+    <div class="footerizq">
+      <img src="img/logo.png" alt="Logo" class="footerlogo">
+      <ul class="socialIcons">
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+    </div>
+
+    <div class="footerder">
+      <li class="footerbtn"><a href="tutorial.html">TUTORIAL</a></li>
+      <li class="footerbtn"><a href="historia.html">HISTORIA</a></li>
+      <li class="footerbtn"><a href="galeria.html">GALERIA</a></li>
+    </div>
+  </div>
+
+  <p class="footermarca">
+    © Todos los derechos reservados 2025 - Creado por Luisa Maria Chaparro Aviles
+  </p>
+    </footer>
+    <script>
+const princess = document.querySelector('.princess');
+const obstacle = document.querySelector('.obstacle');
+const gameOverScreen = document.querySelector('.game-over');
+const retryBtn = document.getElementById('retryBtn');
+const homeBtn = document.getElementById('homeBtn');
+
+let jumping = false;
+let gameActive = true;
+let count = 0;
+
+function jump() {
+  if (jumping || !gameActive) return;
+  jumping = true;
+  princess.classList.add('jump');
+  setTimeout(() => {
+    princess.classList.remove('jump');
+    jumping = false;
+  }, 600);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space') {
+    e.preventDefault(); // ⛔ Evita que la página se desplace
+    jump();
+  }
+});
+
+
+function checkCollision() {
+  if (!gameActive) return;
+  const p = princess.getBoundingClientRect();
+  const o = obstacle.getBoundingClientRect();
+  if (p.left < o.right - 40 && p.right > o.left + 40 && p.bottom > o.top + 20) {
+    gameActive = false;
+    obstacle.style.animation = 'none';
+    document.querySelector('.background').style.animation = 'none';
+    gameOverScreen.style.display = 'flex';
+    gameOverScreen.querySelector('h2').textContent = "¡Has sido atrapada! 💀";
+  }
+}
+
+obstacle.addEventListener('animationiteration', () => {
+  if (!gameActive) return;
+  count++;
+  if (count === 5) {
+    gameActive = false;
+    obstacle.style.animation = 'none';
+    document.querySelector('.background').style.animation = 'none';
+    gameOverScreen.style.display = 'flex';
+    gameOverScreen.querySelector('h2').textContent = "¡Has escapado del castillo! 👑";
+  }
+});
+
+retryBtn.addEventListener('click', () => {
+  location.reload();
+});
+
+homeBtn.addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
+setInterval(checkCollision, 50);
+</script>
+
+</body>
+</html>
